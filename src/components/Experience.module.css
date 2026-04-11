@@ -1,0 +1,92 @@
+.section {
+  min-height: 100vh;
+  padding: 8rem 3rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeIn 0.35s ease;
+}
+
+.container { max-width: 920px; margin: 0 auto; width: 100%; }
+
+.label {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.expBlock {
+  border: 1px solid var(--border);
+  animation: fadeIn 0.3s ease;
+}
+
+.expItem { padding: 1.75rem 2rem; }
+.expItem:not(:last-child) { border-bottom: 1px solid var(--border); }
+
+.expHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.expRole {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.expCompany {
+  font-size: 0.75rem;
+  color: var(--text2);
+  margin-top: 0.2rem;
+  margin-bottom: 0.85rem;
+  font-weight: 300;
+}
+
+.expPeriod {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text3);
+  flex-shrink: 0;
+}
+
+.expBullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.expBullets li {
+  font-size: 0.78rem;
+  color: var(--text2);
+  line-height: 1.7;
+  font-weight: 300;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.expBullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--text3);
+  font-size: 0.7rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 720px) {
+  .section { padding: 6rem 1.25rem 4rem; }
+}

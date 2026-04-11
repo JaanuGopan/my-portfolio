@@ -1,0 +1,49 @@
+/* ============================================================
+   Global Reset & CSS Variables
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:       #ffffff;
+  --bg2:      #f5f5f5;
+  --bg3:      #ebebeb;
+  --text:     #0a0a0a;
+  --text2:    #555555;
+  --text3:    #999999;
+  --border:   #dddddd;
+  --border2:  #bbbbbb;
+  --serif:    'DM Serif Display', serif;
+  --mono:     'DM Mono', monospace;
+  --transition: 0.3s ease;
+}
+
+[data-theme='dark'] {
+  --bg:      #0a0a0a;
+  --bg2:     #141414;
+  --bg3:     #1e1e1e;
+  --text:    #f0f0f0;
+  --text2:   #aaaaaa;
+  --text3:   #666666;
+  --border:  #2a2a2a;
+  --border2: #3a3a3a;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--mono);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  transition: background var(--transition), color var(--transition);
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--border2); }

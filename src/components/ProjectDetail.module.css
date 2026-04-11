@@ -1,0 +1,213 @@
+.section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 6rem 10% 4rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: var(--text3);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  padding: 0;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.backBtn:hover {
+  color: var(--text);
+}
+
+.content {
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  position: relative;
+}
+
+/* Image */
+.imgArea {
+  width: 100%;
+  height: 520px;
+  background: var(--bg3);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+}
+
+.img { width: 100%; height: 100%; object-fit: cover; }
+
+.imgPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.phIcon {
+  width: 48px; height: 48px;
+  border: 1px solid var(--border2);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text3);
+  font-size: 1.2rem;
+}
+
+.imgPlaceholder p {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text3);
+}
+
+/* Body */
+.body { padding: 2.5rem 3rem 3rem; }
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.num  { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); }
+.date { font-size: 0.7rem; letter-spacing: 0.06em; color: var(--text3); }
+
+.title {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--text);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.divider { width: 100%; height: 1px; background: var(--border); margin-bottom: 2rem; }
+
+.sectionLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 0.75rem;
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: var(--text2);
+  line-height: 1.85;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.highlights {
+  list-style: none;
+  margin-bottom: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.highlights li {
+  font-size: 0.85rem;
+  color: var(--text2);
+  line-height: 1.7;
+  padding-left: 1.2rem;
+  position: relative;
+  font-weight: 300;
+}
+
+.highlights li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--text3);
+}
+
+.tagsRow { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+
+.tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--border);
+  color: var(--text2);
+  border-radius: 1px;
+}
+
+.actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+
+.btn {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--border2);
+  color: var(--text);
+  background: none;
+  cursor: pointer;
+  border-radius: 1px;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover { background: var(--text); color: var(--bg); }
+.filled { background: var(--text); color: var(--bg); }
+.filled:hover { background: none; color: var(--text); }
+
+.comingSoon {
+  font-size: 0.8rem;
+  color: var(--text3);
+  letter-spacing: 0.05em;
+}
+
+.notFound {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.notFound h2 {
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: var(--text);
+  font-weight: normal;
+}
+
+@media (max-width: 720px) {
+  .section { padding: 5rem 5% 3rem; }
+  .imgArea { height: 200px; }
+  .body { padding: 1.5rem 1.5rem 2rem; }
+}
