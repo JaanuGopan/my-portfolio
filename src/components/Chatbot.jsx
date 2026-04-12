@@ -25,9 +25,19 @@ Rules:
 
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState([
-    { role: 'assistant', content: "Hi! Do you have any questions about Janugopan's background, skills, or projects?" }
-  ]);
+  const [messages, setMessages] = useState(() => {
+    const saved = localStorage.getItem('janubot_messages');
+    if (saved) {
+      try {
+        return JSON.parse(saved);
+      } catch (e) {
+        console.error('Failed to parse chat history', e);
+      }
+    }
+    return [
+      { role: 'assistant', content: "Hi! Do you have any questions about Janugopan's background, skills, or projects?" }
+    ];
+  });
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [projectContext, setProjectContext] = useState(null);
@@ -43,6 +53,7 @@ export default function Chatbot() {
 
   useEffect(() => {
     scrollToBottom();
+    localStorage.setItem('janubot_messages', JSON.stringify(messages));
   }, [messages, isLoading]);
 
   useEffect(() => {
