@@ -8,6 +8,7 @@ import Projects from './components/Projects'
 import ProjectDetail from './components/ProjectDetail'
 import About    from './components/About'
 import Contact  from './components/Contact'
+import Chatbot  from './components/Chatbot'
 import styles   from './App.module.css'
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
+      <Chatbot />
     </div>
   )
 }

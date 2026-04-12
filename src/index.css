@@ -32,7 +32,7 @@
   --border2: #3a3a3a;
 }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 18px; }
 
 body {
   font-family: var(--mono);

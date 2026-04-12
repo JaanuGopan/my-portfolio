@@ -48,6 +48,13 @@ export default function ProjectDetail() {
             </div>
 
             <h2 className={styles.title}>{project.name}</h2>
+            <button 
+              className={`${styles.btn} ${styles.filled}`} 
+              onClick={() => window.dispatchEvent(new CustomEvent('openChat', { detail: { project } }))}
+              style={{ marginTop: '0.5rem', marginBottom: '1.5rem' }} 
+            >
+              Ask about the project 💬
+            </button>
             <div className={styles.divider} />
 
             <p className={styles.sectionLabel}>Overview</p>
