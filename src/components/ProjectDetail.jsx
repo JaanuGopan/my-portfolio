@@ -20,6 +20,13 @@ export default function ProjectDetail() {
     )
   }
 
+  const hasGithub = Array.isArray(project.githubUrl) 
+    ? project.githubUrl.length > 0 && project.githubUrl[0] !== '#' 
+    : (project.githubUrl && project.githubUrl !== '#');
+  const hasLive = !!project.liveUrl;
+  const hasCustomLinks = Array.isArray(project.customLinks) && project.customLinks.length > 0;
+  const hasAnyLink = hasGithub || hasLive || hasCustomLinks;
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -57,17 +64,35 @@ export default function ProjectDetail() {
             </div>
 
             <div className={styles.actions}>
-              {project.githubUrl && project.githubUrl !== '#' && (
-                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className={`${styles.btn} ${styles.filled}`}>
-                  GitHub ↗
-                </a>
+              {hasGithub && (
+                Array.isArray(project.githubUrl) 
+                  ? project.githubUrl.map((link, idx) => (
+                      <a key={idx} href={link.url || link} target="_blank" rel="noopener noreferrer" className={`${styles.btn} ${styles.filled}`}>
+                        {link.label || `GitHub ${project.githubUrl.length > 1 ? idx + 1 : ''}`.trim()} ↗
+                      </a>
+                    ))
+                  : (
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className={`${styles.btn} ${styles.filled}`}>
+                        GitHub ↗
+                      </a>
+                    )
               )}
-              {project.liveUrl && (
+
+              {hasLive && (
                 <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className={styles.btn}>
                   Live Demo ↗
                 </a>
               )}
-              {!project.liveUrl && (!project.githubUrl || project.githubUrl === '#') && (
+
+              {hasCustomLinks && (
+                project.customLinks.map((link, idx) => (
+                  <a key={`custom-${idx}`} href={link.url} target="_blank" rel="noopener noreferrer" className={styles.btn}>
+                    {link.label} ↗
+                  </a>
+                ))
+              )}
+              
+              {!hasAnyLink && (
                 <span className={styles.comingSoon}>Links coming soon</span>
               )}
             </div>

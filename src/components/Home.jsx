@@ -26,6 +26,12 @@ export default function Home() {
           <button className={styles.btn} onClick={() => navigate('/contact')}>
             Get In Touch
           </button>
+          <a href="https://github.com/JaanuGopan" target="_blank" rel="noopener noreferrer" className={styles.btn}>
+            GitHub ↗
+          </a>
+          <a href="https://www.linkedin.com/in/janugopan-sundaramoorthy/" target="_blank" rel="noopener noreferrer" className={styles.btn}>
+            LinkedIn ↗
+          </a>
         </div>
         <div className={styles.stack}>
           <span className={styles.stackLabel}>Stack</span>

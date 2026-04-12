@@ -58,6 +58,19 @@
   flex-shrink: 0;
 }
 
+.expImageWrap {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: 480px;
+  border: 1px solid var(--border);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .expBullets {
   list-style: none;
   display: flex;

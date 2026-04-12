@@ -9,8 +9,14 @@ export default function Contact() {
 
   const handleSubmit = e => {
     e.preventDefault()
-    // Wire up to your backend / EmailJS / Formspree here
-    console.log('Form submitted:', form)
+    
+    // Construct mailto link using form data
+    const emailBody = `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
+    const mailtoLink = `mailto:sjanugopan@gmail.com?subject=${encodeURIComponent(form.subject || 'Portfolio Inquiry')}&body=${encodeURIComponent(emailBody)}`
+    
+    // Trigger the mail client
+    window.location.href = mailtoLink
+
     setSent(true)
     setTimeout(() => setSent(false), 4000)
     setForm({ name: '', email: '', subject: '', message: '' })
@@ -50,10 +56,10 @@ export default function Contact() {
 
         {/* Social links */}
         <div className={styles.socials}>
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className={styles.btn}>GitHub ↗</a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className={styles.btn}>LinkedIn ↗</a>
+          <a href="https://github.com/JaanuGopan" target="_blank" rel="noopener noreferrer" className={styles.btn}>GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/janugopan-sundaramoorthy/" target="_blank" rel="noopener noreferrer" className={styles.btn}>LinkedIn ↗</a>
           <a href="mailto:sjanugopan@gmail.com" className={styles.btn}>Email ↗</a>
-          <a href="/CV_Temp.pdf" download className={styles.btn}>Download CV ↗</a>
+          <a href="/PDF/CV/Janugopan_S_CV.pdf" download className={styles.btn}>Download CV ↗</a>
         </div>
 
         {/* Form */}

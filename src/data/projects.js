@@ -57,8 +57,17 @@ export const PROJECTS = [
 
       
     ],        
-    githubUrl: '#',
+    githubUrl: [
+      { label: 'GitHub (Backend)', url: 'https://github.com/JaanuGopan/Software-Project-QRBATS-BackEnd.git' },
+      { label: 'GitHub (Frontend)', url: 'https://github.com/JaanuGopan/Software-Project-QRBATS-WebApp-FrontEnd.git' },
+      { label: 'GitHub (Mobile App)', url: 'https://github.com/JaanuGopan/Software-Project-QRBATS-MobileApp.git' },
+    ],
     liveUrl: null,
+    customLinks: [
+      { label: 'SkyTicker', url: 'http://192.248.50.239/' },
+      { label: 'Mobile App', url: 'https://skyticker-mobile.vercel.app/' }
+    ],
+
   },
   {
     id: 2,
@@ -76,8 +85,12 @@ export const PROJECTS = [
       'Used RAG (Retrieval-Augmented Generation) for accurate contextual answers.',
     ],
     tags: ['Python', 'PyTorch', 'FastAPI', 'LLM', 'RAG', 'Transformers', 'arXiv'],
-    images: ['/images/projects/scientific_paper_chatbot/1.jpeg'],
-    githubUrl: '#',
+    images: [
+      '/images/projects/scientific_paper_chatbot/1.jpeg',
+      '/images/projects/scientific_paper_chatbot/2.png',
+      '/images/projects/scientific_paper_chatbot/3.png'
+    ],
+    githubUrl: 'https://github.com/hasee-k/abstract-generator.git',
     liveUrl: null,
   },
   {
@@ -97,7 +110,7 @@ export const PROJECTS = [
     ],
     tags: ['Spring Boot', 'React.js', 'Kafka', 'Docker', 'PostgreSQL', 'Microservices'],
     images: [],
-    githubUrl: '#',
+    githubUrl: 'https://github.com/H-Neethika/stalls-reservation-system.git',
     liveUrl: null,
   },
   {
@@ -130,22 +143,43 @@ export const PROJECTS = [
   {
     id: 5,
     num: '005',
-    name: 'Federated Learning Framework',
-    date: 'Feb 2025 – Nov 2025',
-    shortDesc:
-      'Final Year Project — Heterogeneity-aware federated learning framework reducing communication cost by 75% with minimal accuracy loss.',
-    fullDesc:
-      'A novel federated learning framework designed to handle real-world heterogeneity in distributed machine learning. The system proposes a new aggregation method that uses statistical divergence and peer validation to improve model accuracy while drastically cutting communication overhead.',
-    highlights: [
-      'Proposed a heterogeneity-aware aggregation method using statistical divergence and peer validation.',
-      'Implemented post-quantum security to future-proof the communication layer.',
-      'Applied model quantization, reducing communication cost by 75% with minimal accuracy loss.',
-      'Evaluated across multiple non-IID data distributions with consistent performance gains.',
+    name: 'SHEAF: Secure Heterogeneity-Aware Efficient Aggregation for Federated Learning',
+date: 'Feb 2025 – Nov 2025',
+shortDesc:
+  'Final Year Research Project — Proposed a secure, heterogeneity-aware federated learning framework achieving ~84.7% accuracy with ~75% communication cost reduction under non-IID settings.',
+fullDesc:
+  'Developed SHEAF, a novel federated learning framework addressing real-world data heterogeneity, security, and communication efficiency. The system introduces aggregation strategies based on Jensen-Shannon Divergence and Shannon Entropy, combined with peer validation signals to improve convergence and model robustness. Integrated a post-quantum secure client–server communication protocol and optimized system performance using model quantization. Evaluated on CIFAR-10 and 5G-NIDD datasets, demonstrating improved accuracy, stability, and cost efficiency compared to existing methods.',
+highlights: [
+  'Proposed heterogeneity-aware aggregation methods (1-JSD, SEBW, AB(1-JSD), AB-SEBW) combining statistical divergence and peer validation.',
+  'Achieved up to 84.7% accuracy on CIFAR-10 with improved convergence under highly non-IID data distributions.',
+  'Reduced communication overhead by ~75% using post-training model quantization with minimal accuracy loss (~±1%).',
+  'Designed and implemented a post-quantum secure communication protocol using ML-KEM, Falcon-512, and Ascon/AES-GCM.',
+  'Formally verified security properties (confidentiality and authentication) using the Scyther tool.',
+  'Optimized FL performance using techniques like selective quantization, mixed precision analysis, and adaptive aggregation strategies.',
+  'Benchmarked against FedAvg and CAFA, consistently outperforming in accuracy and stability.',
+],
+tags: ['Python', 'PyTorch', 'Federated Learning', 'Post-Quantum Cryptography', 'Machine Learning', 'Distributed Systems', 'Research'],
+images: [
+      '/images/projects/fyp/1.gif',
+      '/images/projects/fyp/2.png',
+      '/images/projects/fyp/3.png',
+      '/images/projects/fyp/4.png',
+      '/images/projects/fyp/5.png',
+      '/images/projects/fyp/6.png',
+      '/images/projects/fyp/7.png',
+      '/images/projects/fyp/8.png',
+      '/images/projects/fyp/9.png',
+      '/images/projects/fyp/10.png',
+      '/images/projects/fyp/11.png',
+      '/images/projects/fyp/12.png',
+      
     ],
-    tags: ['Python', 'PyTorch', 'Federated Learning', 'Post-Quantum', 'Cryptography', 'ML', 'Research'],
-    images: ['/images/projects/fyp/1.png'],
     githubUrl: '#',
     liveUrl: null,
+    customLinks: [
+      { label: 'Conference Paper', url: '/PDF/FYP/IEEE_ICC_2026____SHEAF__Secure_Heterogeneity_Aware_Efficient_Aggregation_for_Federated_Learning.pdf' },
+      { label: 'Report', url: '/PDF/FYP/FYP_Ruhuna_2025_Final_Report.pdf' }
+    ],
   },
   {
     id: 6,
@@ -164,8 +198,38 @@ export const PROJECTS = [
       'Containerised the entire ecosystem using Docker and docker-compose orchestration.',
     ],
     tags: ['Cloud', 'Microservices', 'Spring Boot', 'Spring Cloud', 'Docker', 'RabbitMQ', 'Keycloak'],
-    images: ['/images/projects/saloon/1.jpeg'],
+    images: [
+      '/images/projects/saloon/1.png',
+      '/images/projects/saloon/2.png',
+      '/images/projects/saloon/3.png'
+    ],
     githubUrl: '#',
+    liveUrl: null,
+  },
+  {
+    id: 7,
+    num: '007',
+    name: 'Image Caption Prediction AI',
+    date: 'Personal Project',
+    shortDesc:
+      'AI model generating natural, context-aware image captions using a combination of VGG16 CNN and LSTM networks.',
+    fullDesc:
+      'An advanced AI project designed to whip up natural, context-aware captions for images. By leveraging the Flickr8k dataset and combining Convolutional Neural Networks (CNN) with Long Short-Term Memory (LSTM) networks, this model bridges the gap between computer vision and natural language processing to truly understand and describe picture contents.',
+    highlights: [
+      'Feature Extraction: Utilized a pre-trained VGG16 CNN model to extract high-level features from input images.',
+      'Text Generation: Integrated robust LSTM networks to generate meaningful and contextual captions based on extracted features.',
+      'Training Pipeline: Implemented and trained a sequence model with CNN and LSTM layers on the structural Flickr8k dataset.',
+      'Bridged visual data and textual descriptions to explore accessibility and smart content management potentials.'
+    ],
+    tags: ['Python', 'CNN', 'LSTM', 'VGG16', 'NLP', 'Computer Vision', 'AI'],
+    images: ['/images/projects/image_captioning/1.jpeg',
+      '/images/projects/image_captioning/2.jpeg',
+      '/images/projects/image_captioning/3.jpeg',
+      '/images/projects/image_captioning/4.jpeg',
+      '/images/projects/image_captioning/5.jpeg',
+      
+      ],
+    githubUrl: 'https://colab.research.google.com/drive/1gl0oW-y0i4TPATDGIftYdDQBu9AZritf?usp=sharing',
     liveUrl: null,
   },
 ]
