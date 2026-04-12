@@ -115,6 +115,48 @@
 .assistantMessage p + p { margin-top: 0.5rem; }
 .assistantMessage ul, .assistantMessage ol { margin: 0.5rem 0; padding-left: 1.5rem; }
 
+.suggestedQueries {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  overflow-x: auto;
+  border-top: 1px solid var(--border);
+  background-color: var(--bg);
+  scrollbar-width: none; /* Firefox */
+}
+
+.suggestedQueries::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.suggestedQueries + .inputArea {
+  border-top: none;
+  padding-top: 0.25rem;
+}
+
+.suggestionPill {
+  background-color: var(--bg2);
+  border: 1px solid var(--border2);
+  color: var(--text);
+  padding: 0.4rem 0.8rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.suggestionPill:hover:not(:disabled) {
+  border-color: var(--text);
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+.suggestionPill:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .inputArea {
   display: flex;
   padding: 0.75rem;

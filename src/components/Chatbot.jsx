@@ -90,13 +90,11 @@ export default function Chatbot() {
 
   const handleToggle = () => setIsOpen(!isOpen);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!inputValue.trim() || isLoading || isLimitReached) return;
+  const sendMessage = async (text) => {
+    if (!text.trim() || isLoading || isLimitReached) return;
 
-    const userMessage = { role: 'user', content: inputValue };
+    const userMessage = { role: 'user', content: text };
     setMessages((prev) => [...prev, userMessage]);
-    setInputValue('');
     setIsLoading(true);
 
     try {
@@ -141,6 +139,14 @@ export default function Chatbot() {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!inputValue.trim() || isLoading || isLimitReached) return;
+    const text = inputValue;
+    setInputValue('');
+    sendMessage(text);
   };
 
   return (
@@ -204,6 +210,24 @@ export default function Chatbot() {
             
             <div ref={messagesEndRef} />
           </div>
+
+          {!isLimitReached && (
+            <div className={styles.suggestedQueries}>
+              {["Tell me about your AI projects", "What's your tech stack?", "Are you open to freelance?"].map((query, idx) => (
+                <button
+                  key={idx}
+                  className={styles.suggestionPill}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    sendMessage(query);
+                  }}
+                  disabled={isLoading}
+                >
+                  {query}
+                </button>
+              ))}
+            </div>
+          )}
 
           <form className={styles.inputArea} onSubmit={handleSubmit}>
             <input
