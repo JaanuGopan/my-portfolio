@@ -58,6 +58,20 @@
   flex-shrink: 0;
 }
 
+.expOverview {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.expOverview p {
+  font-size: 0.8rem;
+  color: var(--text2);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
 .expImageWrap {
   margin-top: 1rem;
   margin-bottom: 1.5rem;

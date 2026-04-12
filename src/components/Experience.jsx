@@ -32,6 +32,13 @@ export default function Experience() {
               </div>
               <div className={styles.expPeriod}>Jul 2024 – Jan 2025</div>
             </div>
+
+            <div className={styles.expOverview}>
+              <p>Worked as a software engineering intern on a large-scale, production learning management system (Learnova) using agile development practices.</p>
+              <p>Contributed to full-stack development, including feature implementation, production bug fixes, and secure API integration.</p>
+              <p>Collaborated closely with senior engineers, UI/UX designers, QA teams, and ML engineers through daily stand-ups, dev-syncs, and code reviews.</p>
+              <p>Gained hands-on experience with CI/CD-based deployments, version control workflows, and real-world software engineering practices.</p>
+            </div>
             
             <div className={styles.expImageWrap}>
               <ImageSlider images={internImages} name="Syntax Genie Intern Experience" />
