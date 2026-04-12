@@ -65,6 +65,23 @@ export default function About() {
                 </div>
               ))}
             </div>
+
+            {/* References */}
+            <div className={styles.refsBlock}>
+              <div className={styles.refItem}>
+                <div className={styles.refLabel}>Professional Reference</div>
+                <div className={styles.refName}>Lahiru Jayakody</div>
+                <div className={styles.refRole}>Software Architect, Syntax Genie Pvt Ltd</div>
+                <div className={styles.refDetail}>Email: <a href="mailto:me@lahiiru.com" style={{color: 'inherit', textDecoration: 'underline'}}>me@lahiiru.com</a></div>
+                <div className={styles.refDetail}>Phone: <a href="tel:+94770458836" style={{color: 'inherit', textDecoration: 'underline'}}>+94 77 045 8836</a></div>
+              </div>
+              <div className={styles.refItem}>
+                <div className={styles.refLabel}>Academic Reference</div>
+                <div className={styles.refName}>Dr. Pasika Ranaweera</div>
+                <div className={styles.refRole}>Assistant Professor, University College Dublin</div>
+                <div className={styles.refDetail}>Email: <a href="mailto:pasika.ranaweera@ucd.ie" style={{color: 'inherit', textDecoration: 'underline'}}>pasika.ranaweera@ucd.ie</a></div>
+              </div>
+            </div>
           </div>
 
           {/* Right */}

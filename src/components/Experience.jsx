@@ -12,7 +12,6 @@ export default function Experience() {
     '/images/experiance/intern/6.png',
     '/images/experiance/intern/7.png',
     '/images/experiance/intern/8.png',
-    '/images/experiance/intern/9.jpeg',
   ]
 
   return (
@@ -31,6 +30,14 @@ export default function Experience() {
                 </div>
               </div>
               <div className={styles.expPeriod}>Jul 2024 – Jan 2025</div>
+            </div>
+
+            <div style={{ marginBottom: '1.5rem', borderRadius: '12px', overflow: 'hidden' }}>
+              <img 
+                src="/images/experiance/intern/9.jpeg" 
+                alt="Syntax Genie Intern Group" 
+                style={{ width: '100%', height: 'auto', display: 'block' }} 
+              />
             </div>
 
             <div className={styles.expOverview}>

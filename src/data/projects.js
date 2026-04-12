@@ -109,7 +109,7 @@ export const PROJECTS = [
       'Containerised the full system using Docker and Docker Compose for easy deployment.',
     ],
     tags: ['Spring Boot', 'React.js', 'Kafka', 'Docker', 'PostgreSQL', 'Microservices'],
-    images: [],
+    images: ['/images/projects/book_stall/1.png'],
     githubUrl: 'https://github.com/H-Neethika/stalls-reservation-system.git',
     liveUrl: null,
   },
