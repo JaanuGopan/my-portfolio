@@ -35,10 +35,12 @@ export default function ProjectDetail() {
         </button>
         
         <div className={styles.content}>
-          {/* Image */}
-          <div className={styles.imgArea}>
-            <ImageSlider images={project.images} name={project.name} />
-          </div>
+          {/* Main Image */
+          project.images && project.images.length > 0 && (
+            <div className={styles.imgArea}>
+              <ImageSlider images={project.images} name={project.name} />
+            </div>
+          )}
 
           {/* Body */}
           <div className={styles.body}>
@@ -59,6 +61,15 @@ export default function ProjectDetail() {
 
             <p className={styles.sectionLabel}>Overview</p>
             <p className={styles.desc}>{project.fullDesc}</p>
+
+            {project.imageSections && project.imageSections.map((section, idx) => (
+              <div key={idx} style={{ marginBottom: '2.5rem' }}>
+                <p className={styles.sectionLabel}>{section.title}</p>
+                <div className={styles.sectionSliderArea}>
+                  <ImageSlider images={section.images} name={`${project.name} - ${section.title}`} />
+                </div>
+              </div>
+            ))}
 
             <p className={styles.sectionLabel}>Key Highlights</p>
             <ul className={styles.highlights}>

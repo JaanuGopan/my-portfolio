@@ -57,6 +57,18 @@
 
 .img { width: 100%; height: 100%; object-fit: cover; }
 
+.sectionSliderArea {
+  width: 100%;
+  height: 480px;
+  background: transparent;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
 .imgPlaceholder {
   display: flex;
   flex-direction: column;

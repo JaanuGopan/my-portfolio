@@ -15,48 +15,75 @@ export const PROJECTS = [
     name: 'QR Code-Based Attendance Tracking System',
     date: 'Jan 2024 – Jun 2024',
     shortDesc:
-      'Full-stack attendance system with QR check-in, GPS validation, JWT auth, and CI/CD — deployed in a real university environment.',
+      'Full-stack attendance system with QR check-in, GPS validation, JWT authentication, and CI/CD — deployed in a real university environment.',
     fullDesc:
-      'Designed and developed a full-stack attendance system targeting real university use. Students check in by scanning a generated QR code, which is validated against their GPS location and device fingerprint to prevent proxy attendance.',
+      'Designed and developed a full-stack attendance system for real university use. Students check in by scanning QR codes, validated using GPS location and device verification to prevent proxy attendance.',
     highlights: [
-      'Built mobile app in Flutter and backend services with Spring Boot and PostgreSQL.',
-      'Implemented QR-based attendance with GPS validation and secured it using JWT and device verification.',
-      'Deployed and tested the system live in a university environment.',
-      'Implemented a CI/CD pipeline using GitHub Actions for automated deployment to a Faculty Linux server.',
+      'Built a React.js web app for lecturers to create modules and sessions, generate QR codes, and manage attendance reports.',
+      'Developed admin features to manage students, lecturers, events, and attendance records.',
+      'Built a Flutter mobile app for students with module enrollment, QR scanning, attendance marking, and history tracking.',
+      'Developed backend services using Spring Boot and PostgreSQL with JWT-based authentication.',
+      'Implemented QR-based attendance with GPS validation and device verification.',
+      'Deployed and tested the system in a real university environment.',
+      'Set up CI/CD pipeline using GitHub Actions for automated deployment to a faculty Linux server.',
     ],
     tags: ['Flutter', 'Spring Boot', 'PostgreSQL', 'JWT', 'GitHub Actions', 'CI/CD'],
-    images: [
-      '/images/projects/skyticker/1.jpeg',
-      '/images/projects/skyticker/2.jpeg', 
-      '/images/projects/skyticker/3.jpeg',
-      '/images/projects/skyticker/4.jpeg',
-      '/images/projects/skyticker/5.jpeg',
-      '/images/projects/skyticker/6.jpeg',
-      '/images/projects/skyticker/7.jpeg',
-      '/images/projects/Mobile App Images/1.jpg',
-      '/images/projects/Mobile App Images/2.jpg',
-      '/images/projects/Mobile App Images/3.jpg',
-      '/images/projects/Mobile App Images/4.jpg',
-      '/images/projects/Mobile App Images/5.jpg',
-      '/images/projects/Mobile App Images/6.jpg',
-      '/images/projects/Mobile App Images/7.jpg',
-      '/images/projects/Mobile App Images/8.jpg',
-      '/images/projects/Mobile App Images/9.jpg',
-      '/images/projects/Mobile App Images/10.jpg',
-      '/images/projects/Mobile App Images/11.jpg',
-      '/images/projects/Mobile App Images/12.jpg',
-      '/images/projects/Mobile App Images/13.jpg',
-      '/images/projects/Mobile App Images/14.jpg',
-      '/images/projects/Mobile App Images/15.jpg',
-      '/images/projects/Mobile App Images/16.jpg',
-      '/images/projects/Mobile App Images/17.jpg',
-      '/images/projects/Mobile App Images/18.jpg',
-      '/images/projects/Mobile App Images/19.png',
-      '/images/projects/Mobile App Images/20.jpg',
-      '/images/projects/Mobile App Images/21.jpg'
-
-      
-    ],        
+    imageSections: [
+      {
+        title: 'Web App',
+        images: [
+          //'/images/projects/skyticker/webapp/1.png',
+          '/images/projects/skyticker/webapp/2.png',
+          '/images/projects/skyticker/webapp/3.png',
+          '/images/projects/skyticker/webapp/4.png',
+          '/images/projects/skyticker/webapp/5.png',
+          '/images/projects/skyticker/webapp/6.png',
+          '/images/projects/skyticker/webapp/7.png',
+          '/images/projects/skyticker/webapp/8.png',
+          '/images/projects/skyticker/webapp/9.png',
+          '/images/projects/skyticker/webapp/10.png',
+          '/images/projects/skyticker/webapp/11.png',
+          '/images/projects/skyticker/webapp/12.png',
+          '/images/projects/skyticker/webapp/13.png',
+          '/images/projects/skyticker/webapp/14.png'
+        ]
+      },
+      {
+        title: 'Mobile App',
+        images: [
+          '/images/projects/skyticker/mobileapp/1.jpg',
+          '/images/projects/skyticker/mobileapp/2.jpg',
+          '/images/projects/skyticker/mobileapp/3.jpg',
+          '/images/projects/skyticker/mobileapp/4.jpg',
+          '/images/projects/skyticker/mobileapp/5.jpg',
+          '/images/projects/skyticker/mobileapp/6.jpg',
+          '/images/projects/skyticker/mobileapp/7.jpg',
+          '/images/projects/skyticker/mobileapp/8.jpg',
+          '/images/projects/skyticker/mobileapp/9.jpg',
+          '/images/projects/skyticker/mobileapp/10.jpg',
+          '/images/projects/skyticker/mobileapp/11.jpg',
+          '/images/projects/skyticker/mobileapp/12.jpg',
+          '/images/projects/skyticker/mobileapp/13.jpg',
+          '/images/projects/skyticker/mobileapp/14.jpg',
+          '/images/projects/skyticker/mobileapp/15.jpg',
+          '/images/projects/skyticker/mobileapp/16.jpg',
+          '/images/projects/skyticker/mobileapp/17.jpg',
+          '/images/projects/skyticker/mobileapp/18.jpg',
+          '/images/projects/skyticker/mobileapp/19.png',
+          '/images/projects/skyticker/mobileapp/20.jpg',
+          '/images/projects/skyticker/mobileapp/21.jpg'
+        ]
+      },
+      {
+        title: 'Backend Architecture',
+        images: [
+          '/images/projects/skyticker/backend/skyticker_system_architecture.svg',
+          '/images/projects/skyticker/backend/skyticker_attendance_flow.svg',
+          '/images/projects/skyticker/backend/skyticker_package_structure.svg'
+        ]
+      }
+    ],  
+    images :['/images/projects/skyticker/webapp/1.png'],      
     githubUrl: [
       { label: 'GitHub (Backend)', url: 'https://github.com/JaanuGopan/Software-Project-QRBATS-BackEnd.git' },
       { label: 'GitHub (Frontend)', url: 'https://github.com/JaanuGopan/Software-Project-QRBATS-WebApp-FrontEnd.git' },
