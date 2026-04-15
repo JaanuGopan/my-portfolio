@@ -4,10 +4,10 @@ import ImageSlider from './ImageSlider'
 import styles from './ProjectDetail.module.css'
 
 export default function ProjectDetail() {
-  const { id } = useParams()
+  const { route } = useParams()
   const navigate = useNavigate()
   
-  const project = PROJECTS.find(p => p.id === parseInt(id, 10))
+  const project = PROJECTS.find(p => p.route === route)
 
   if (!project) {
     return (

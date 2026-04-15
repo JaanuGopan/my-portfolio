@@ -12,8 +12,8 @@ export default function Projects() {
 
         {/* Projects Grid */}
         <div className={styles.grid}>
-          {PROJECTS.map(p => (
-            <ProjectCard key={p.id} project={p} onClick={() => navigate(`/projects/${p.id}`)} />
+          {PROJECTS.sort((a,b) => a.id - b.id).map(p => (
+            <ProjectCard key={p.id} project={p} onClick={() => navigate(`/projects/${p.route}`)} />
           ))}
         </div>
         

@@ -11,6 +11,7 @@
 export const PROJECTS = [
   {
     id: 1,
+    route: '1',
     num: '001',
     name: 'QR Code-Based Attendance Tracking System',
     date: 'Jan 2024 – Jun 2024',
@@ -97,7 +98,8 @@ export const PROJECTS = [
 
   },
   {
-    id: 2,
+    id: 3,
+    route: '2',
     num: '002',
     name: 'Scientific Paper Summarizer & Chatbot',
     date: 'Jan 2025 – Apr 2025',
@@ -121,7 +123,8 @@ export const PROJECTS = [
     liveUrl: null,
   },
   {
-    id: 3,
+    id: 4,
+    route: '3',
     num: '003',
     name: 'Book Stall Reservation System – Microservices',
     date: 'Aug 2025 – Dec 2025',
@@ -141,7 +144,8 @@ export const PROJECTS = [
     liveUrl: null,
   },
   {
-    id: 4,
+    id: 5,
+    route: '4',
     num: '004',
     name: 'Secure Chat Application',
     date: 'Mar 2025 – Jun 2025',
@@ -168,7 +172,8 @@ export const PROJECTS = [
     liveUrl: null,
   },
   {
-    id: 5,
+    id: 2,
+    route: '5',
     num: '005',
     name: 'SHEAF: Secure Heterogeneity-Aware Efficient Aggregation for Federated Learning',
 date: 'Feb 2025 – Nov 2025',
@@ -210,6 +215,7 @@ images: [
   },
   {
     id: 6,
+    route: '6',
     num: '006',
     name: 'Cloud-Native Salon Management Platform',
     date: 'Academic Group Project (EC7204)',
@@ -235,6 +241,7 @@ images: [
   },
   {
     id: 7,
+    route: '7',
     num: '007',
     name: 'Image Caption Prediction AI',
     date: 'Personal Project',
@@ -261,6 +268,7 @@ images: [
   },
   {
     id: 8,
+    route: '8',
     num: '008',
     name: 'Automated Full-Stack CI/CD Pipeline',
     date: 'Jun 2024',
