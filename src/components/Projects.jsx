@@ -9,7 +9,6 @@ export default function Projects() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <p className={styles.label}>[ 03 ] — Projects</p>
 
         {/* Projects Grid */}
         <div className={styles.grid}>

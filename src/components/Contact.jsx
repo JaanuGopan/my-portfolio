@@ -1,5 +1,5 @@
-import { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { useState } from 'react'
 import styles from './Contact.module.css'
 
 export default function Contact() {
@@ -41,7 +41,6 @@ export default function Contact() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <p className={styles.label}>[ 03 ] — Get In Touch</p>
         <h2 className={styles.heading}>Let's build<br />something great.</h2>
         <p className={styles.sub}>
           Open to full-time roles, freelance projects, or just a good conversation about tech.

@@ -17,7 +17,6 @@ export default function Experience() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <p className={styles.label}>[ 02 ] — Experience</p>
         <div className={styles.expBlock}>
           <div className={styles.expItem}>
             <div className={styles.expHeader}>

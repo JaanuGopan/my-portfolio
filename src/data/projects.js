@@ -259,4 +259,24 @@ images: [
     githubUrl: 'https://colab.research.google.com/drive/1gl0oW-y0i4TPATDGIftYdDQBu9AZritf?usp=sharing',
     liveUrl: null,
   },
+  {
+    id: 8,
+    num: '008',
+    name: 'Automated Full-Stack CI/CD Pipeline',
+    date: 'Jun 2024',
+    shortDesc:
+      'CI/CD Pipeline integrating GitHub, Jenkins, Docker, and Docker Compose for a Spring Boot and React application.',
+    fullDesc:
+      'This project automates the deployment of a Spring Boot backend and React frontend application with MySQL. The CI/CD pipeline orchestrated by Jenkins pulls the code upon a GitHub webhook trigger, builds the applications using Maven and npm, runs unit tests, builds the respective Docker images tagged with commit IDs, and deploys them locally via Docker Compose.',
+    highlights: [
+      'Configured Jenkins CI/CD pipeline triggered automatically via GitHub Webhooks.',
+      'Automated application builds utilizing Maven for Spring Boot and npm for React.',
+      'Built layered Docker images for Spring Boot, React, and MySQL.',
+      'Containerised and deployed the system utilizing Docker and Docker Compose for consistency.',
+    ],
+    tags: ['Jenkins', 'Docker', 'Docker Compose', 'GitHub', 'CI/CD', 'DevOps'],
+    images: ['/images/projects/devops/1.png'],
+    githubUrl: '#',
+    liveUrl: null,
+  },
 ]

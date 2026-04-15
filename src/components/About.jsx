@@ -20,7 +20,6 @@ export default function About() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <p className={styles.label}>[ 02 ] — About Me</p>
 
         <div className={styles.grid}>
           {/* Left */}
