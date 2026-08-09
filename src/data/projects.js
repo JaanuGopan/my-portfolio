@@ -113,9 +113,9 @@ export const PROJECTS = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     route: "2",
-    num: "002",
+    num: "004",
     name: "Scientific Paper Summarizer & Chatbot",
     date: "Jan 2025 – Apr 2025",
     shortDesc:
@@ -146,9 +146,9 @@ export const PROJECTS = [
     liveUrl: null,
   },
   {
-    id: 4,
+    id: 5,
     route: "3",
-    num: "003",
+    num: "005",
     name: "Book Stall Reservation System – Microservices",
     date: "Aug 2025 – Dec 2025",
     shortDesc:
@@ -174,9 +174,9 @@ export const PROJECTS = [
     liveUrl: null,
   },
   {
-    id: 5,
+    id: 6,
     route: "4",
-    num: "004",
+    num: "006",
     name: "Secure Chat Application",
     date: "Mar 2025 – Jun 2025",
     shortDesc:
@@ -211,7 +211,7 @@ export const PROJECTS = [
   {
     id: 2,
     route: "5",
-    num: "005",
+    num: "002",
     name: "SHEAF: Secure Heterogeneity-Aware Efficient Aggregation for Federated Learning",
     date: "Feb 2025 – Nov 2025",
     shortDesc:
@@ -261,9 +261,9 @@ export const PROJECTS = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     route: "6",
-    num: "006",
+    num: "007",
     name: "Cloud-Native Salon Management Platform",
     date: "Academic Group Project (EC7204)",
     shortDesc:
@@ -295,9 +295,9 @@ export const PROJECTS = [
     liveUrl: null,
   },
   {
-    id: 7,
+    id: 8,
     route: "7",
-    num: "007",
+    num: "008",
     name: "Image Caption Prediction AI",
     date: "Personal Project",
     shortDesc:
@@ -323,9 +323,9 @@ export const PROJECTS = [
     liveUrl: null,
   },
   {
-    id: 8,
+    id: 9,
     route: "8",
-    num: "008",
+    num: "009",
     name: "Automated Full-Stack CI/CD Pipeline",
     date: "Jun 2024",
     shortDesc:
@@ -340,6 +340,47 @@ export const PROJECTS = [
     ],
     tags: ["Jenkins", "Docker", "Docker Compose", "GitHub", "CI/CD", "DevOps"],
     images: ["/images/projects/devops/1.png"],
+    githubUrl: "#",
+    liveUrl: null,
+  },
+  {
+    id: 3,
+    route: "9",
+    num: "003",
+    name: "Doc-Chat – Multimodal AI Document Intelligence & RAG Platform",
+    date: "Jan 2025 – Present",
+    shortDesc:
+      "Full-stack multimodal RAG platform with PostgreSQL pgvector, Vision LLM OCR, KaTeX LaTeX math transcription, and dynamic PDF bounding-box citation grounding.",
+    fullDesc:
+      "Architected an enterprise-grade Multimodal Retrieval-Augmented Generation (RAG) platform capable of ingesting multi-page complex PDFs, generating 384-dim vector embeddings (all-MiniLM-L6-v2), and executing sub-second vector similarity retrieval in PostgreSQL via pgvector. Engineered an enterprise ETL workflow for asynchronous document parsing, image extraction, batch embedding generation, and status telemetry. Built a Vision LLM OCR pipeline via LM Studio REST APIs to convert visual math formulas into clean LaTeX notation (rendered via KaTeX) and auto-caption figures using surrounding document context. Developed an interactive React + TypeScript UI featuring real-time PDF rendering (react-pdf) with visual bounding-box (bbox) highlight overlays for exact answer source citations.",
+    highlights: [
+      "Designed and deployed an end-to-end Multimodal Retrieval-Augmented Generation (RAG) platform capable of ingesting multi-page PDFs, generating 384-dim embeddings (all-MiniLM-L6-v2), and executing vector similarity search in PostgreSQL via pgvector.",
+      "Engineered an enterprise ETL workflow using FastAPI webhooks and background workers for asynchronous document parsing, image extraction, batch embedding generation, and status telemetry.",
+      "Implemented Vision LLM OCR pipeline to convert visual mathematical equations into LaTeX notation (rendered in KaTeX) and auto-caption figures using surrounding document context.",
+      "Developed an interactive React + TypeScript UI featuring real-time PDF rendering (react-pdf) with visual bounding-box (bbox) highlight overlays for exact answer source citations.",
+      "Engineered Query Expansion & Re-ranking pipeline using local LLMs to augment user queries with technical terminology and synonyms prior to vector search, boosting retrieval accuracy.",
+      "Implemented JWT authentication, password hashing (bcrypt), structured chat history management, and modern responsive styling with Tailwind CSS and Shadcn UI.",
+    ],
+    tags: [
+      "React 18",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "pgvector",
+      "LM Studio",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "RAG",
+      "LLM",
+      "KaTeX",
+    ],
+    images: [
+      "/images/projects/doc_chat/1.png",
+      "/images/projects/doc_chat/2.png",
+      "/images/projects/doc_chat/3.png",
+      "/images/projects/doc_chat/4.png",
+    ],
     githubUrl: "#",
     liveUrl: null,
   },

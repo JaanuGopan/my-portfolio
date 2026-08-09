@@ -297,3 +297,46 @@ None
 - /images/projects/image_captioning/3.jpeg
 - /images/projects/image_captioning/4.jpeg
 - /images/projects/image_captioning/5.jpeg
+
+## Project: Doc-Chat – Multimodal AI Document Intelligence & RAG Platform
+- **id**: 3
+- **num**: 003
+- **date**: Jan 2025 – Present
+- **shortDesc**: Full-stack multimodal RAG system with PostgreSQL pgvector, Vision LLM OCR, KaTeX LaTeX math transcription, and dynamic PDF bounding-box citation grounding.
+- **githubUrl**: #
+- **liveUrl**: null
+
+### Full Description
+Architected an enterprise-grade Multimodal Retrieval-Augmented Generation (RAG) platform capable of ingesting multi-page complex PDFs, generating 384-dim vector embeddings (all-MiniLM-L6-v2), and executing sub-second vector similarity retrieval in PostgreSQL via pgvector. Engineered an enterprise ETL workflow for asynchronous document parsing, image extraction, batch embedding generation, and status telemetry. Built a Vision LLM OCR pipeline via LM Studio REST APIs to convert visual math formulas into clean LaTeX notation (rendered via KaTeX) and auto-caption figures using surrounding document context. Developed an interactive React + TypeScript UI featuring real-time PDF rendering (react-pdf) with visual bounding-box (bbox) highlight overlays for exact answer source citations.
+
+### Highlights
+- Designed and deployed an end-to-end Multimodal Retrieval-Augmented Generation (RAG) platform capable of ingesting multi-page PDFs, generating 384-dim embeddings (all-MiniLM-L6-v2), and executing vector similarity search in PostgreSQL via pgvector.
+- Engineered an enterprise ETL workflow using FastAPI webhooks and background workers for asynchronous document parsing, image extraction, batch embedding generation, and pipeline status telemetry.
+- Implemented Vision LLM OCR pipeline to convert visual mathematical equations into LaTeX notation (rendered in KaTeX) and auto-caption figures using surrounding document context.
+- Developed an interactive React + TypeScript UI featuring real-time PDF rendering (react-pdf) with visual bounding-box (bbox) highlight overlays for exact answer source citations.
+- Engineered Query Expansion & Re-ranking pipeline using local LLMs to augment user queries with technical terminology and synonyms prior to vector search, boosting retrieval accuracy.
+- Implemented JWT authentication, password hashing (bcrypt), structured chat history management, and modern responsive styling with Tailwind CSS and Shadcn UI.
+
+### Tags
+- React 18
+- TypeScript
+- Python
+- FastAPI
+- PostgreSQL
+- pgvector
+- LM Studio
+- Tailwind CSS
+- Shadcn UI
+- RAG
+- LLM
+- KaTeX
+
+### GitHub URLs
+None
+
+### Custom Links
+None
+
+### Images
+- /images/projects/doc_chat/1.png
+
